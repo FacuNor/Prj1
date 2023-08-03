@@ -7,23 +7,601 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Web site test</h1>
-
-    <!--<h3>REQUESTER (FIRST NAME LAST NAME OR EMAIL)</h3>-->
-
-    <label>REQUESTER (FIRST NAME LAST NAME OR EMAIL)*:</label>
+    <h1>RFQ PlayBook Template</h1>
+    <h6>* Obbligatoria</h6>
+    <!--DOMANDA 1-->
+    <label>REQUESTER (FIRST NAME LAST NAME)*:</label>
     <br>
-    <input type="text" id="question1"/>
-    <br>
-    
-    <label>REQUESTER (FIRST NAME LAST NAME OR EMAIL)*:</label>
-    <br>
-    <input type="text" id="question1"/>
+    <input type="text" id="question1" placeholder="Inserisci la tua risposta"/>
     <br>
     
+    <!--DOMANDA 2-->
+    <label>REQUESTER (EMAIL)*:</label>
+    <br>
+    <input type="text" id="question2" placeholder="Inserisci la tua risposta"/>
+    <br>
+    
+    <!--DOMANDA 3-->
+    <label>BUSINESS FUNCTION - ROLE*:</label>
+    <br>
+    <input type="text" id="question3" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 4-->
+    <label>PROJECT TITLE*:</label>
+    <br>
+    <input type="text" id="question4" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 5-->
+    <label>PROJECT DESCRIPTION*:</label>
+    <br>
+    <input type="text" id="question5" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 6-->
+    <label>SUPPLIER SELECTION PROCESS ? (RFI / POC / RFQ) OR CONTRACT/SOW FOR A SUPPLIER ALREADY AWARDED ?*:</label>
+    <br>
+    <select>
+        <option value="" disabled selected>Inserisci la tua risposta</option>
+        <option>SUPPLIER SELECTION</option>
+        <option>CONTRACT/SOW PREPARATION</option>
+    </select>
+    <br>
+
+    <!--DOMANDA 7-->
+    <label>SELECT THE REGION(S) WHERE THE BUDGET WILL BE ALLOCATED (WHERE THE GOODS / SERVICE ARE PAID)*:</label>
+    <br>
+    <form>
+        <label>
+            <input type="checkbox" id="check-all" onclick="checkAll()"> GLOBAL (INCLUDES ALL REGIONS)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="EE" onchange="checkCheckAll()"> EE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="NA" onchange="checkCheckAll()"> NA
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="SA" onchange="checkCheckAll()"> SA
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="MEA" onchange="checkCheckAll()"> MEA
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="IAP" onchange="checkCheckAll()"> IAP
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" data-check-all="check-all" value="CHINA" onchange="checkCheckAll()"> CHINA
+        </label>
+    </form>
+    <br>
+
+    <!--DOMANDA 8-->
+    <label>MASTER STELLANTIS CONTRACTING PARTY*:</label>
+    <br>
+    <input type="text" id="question8" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 9-->
+    <label>AFFILIATES TO MASTER*:</label>
+    <br>
+    <input type="text" id="question9" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 10-->
+    <label>PURCHASING (BUYER)*:</label>
+    <br>
+    <input type="text" id="question10" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 11-->
+    <label>BUDGET TYPE*</label>
+    <form>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> CAPEX
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="OPEX"> OPEX
+        </label>
+    </form>
+    <br>
+
+    <!--DOMANDA 12-->
+    <label>BUDGET CAPEX ALLOCATED*:</label>
+    <br>
+    <input type="number" id="question12" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 13-->
+    <label>BUDGET OPEX (MONTHLY RECURRING CHARGES / EXP USAGE CHARGES / OTHER RECURRING)*:</label>
+    <br>
+    <input type="number" id="question13" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 14-->
+    <label>MAX APV (ANNUAL PURCHASE VALUE)*:</label>
+    <br>
+    <input type="text" id="question14" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 15-->
+    <label>TOTAL CONTRACT VALUE*:</label>
+    <br>
+    <input type="text" id="question15" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 16-->
+    <label>BUSINESS OWNER (FIRST OPERATIONAL APPROVER)*:</label>
+    <br>
+    <input type="text" id="question16" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 17-->
+    <label>FINANCE REVIEWER*:</label>
+    <br>
+    <input type="text" id="question17" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 18-->
+    <label>TECHNICAL ACCOUNTING REVIEWER*:</label>
+    <br>
+    <input type="text" id="question18" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 19-->
+    <label>LEGAL*:</label>
+    <br>
+    <input type="text" id="question19" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 20-->
+    <label>OPERATIONS OP4C*:</label>
+    <br>
+    <input type="text" id="question20" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 21-->
+    <label>TECHNICAL TEAM*:</label>
+    <br>
+    <input type="text" id="question21" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 22-->
+    <label>DOA FINAL APPROVER*:</label>
+    <br>
+    <input type="text" id="question22" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 23-->
+    <label>SUBJECT MATTER EXPERTS*</label>
+    <form>
+        <label>
+            <input type="checkbox" name="languages" value="FINANCE"> FINANCE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="TAX"> TAX
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> BILLING / ACCOUNT PAYABLE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> INSURANCE AND WARRANTY
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> LEGAL SPECIALISTS (IP, SALES, CORP. AFFAIR...)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> PRIVACY OFFICE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> CYBERSECURITY ON BOARD
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> CYBERSECURITY OFF BOARD
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> REGULATORY COMPLIANCE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> QUALITY
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> TESTING & VALIDATION
+        </label>
+    </form>
+    <br>
+
+    <!--DOMANDA 24-->
+    <label>SANDBOX CHANNEL AND GROUP CHAT NAME*:</label>
+    <br>
+    <input type="text" id="question22" placeholder="Inserisci la tua risposta"/>
+    <br>
+
+    <!--DOMANDA 25-->
+    <table>
+        <tr>
+            <th></th>
+            <th>One Off Purchase</th>
+            <th>Financial Lease</th>
+            <th>Operating Lease</th>
+            <th>Recurring Fee</th>
+            <th>Usage Based On Rate</th>
+            <th>Time & Material Rate Card</th>
+            <th>None of previous</th>
+        </tr>
+        <tr>
+            <td>Hardware</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Hardware Maintenance</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Software License</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Software License Maintenance</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Software (Saas) Subscription</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Turn Key Deliverable</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Managed Service</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Professional Service</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Cloud Services (See next Section)</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
+
+    <!--DOMANDA 26-->
+    <table>
+        <tr>
+            <th></th>
+            <th>Marketplace</th>
+            <th>Products</th>
+            <th>Solutions</th>
+            <th>None of the previous</th>
+        </tr>
+        <tr>
+            <td>AWS</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Azure</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Google</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Other Cloud Service Providers</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
+
+    <!--DOMANDA 27-->
+    <label>SOW 1 Design & Development (AGILE)*</label>
+    <form>
+        <label>
+            <input type="checkbox" name="languages" value="FINANCE"> Scope Description
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="TAX"> Regions
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Brands
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Releases Planning / Sprints
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Requirements - Solution Design Documents
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Key Personnel
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> RACI Matrix (Product Owner/Scrum Master/ Dev Team ...)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Collaboration with STLA Third Parties
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Quality KPIs
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Acceptance Criteria 
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> BackGround & ForeGround IP Rights
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> IP Rights Matrix (Sw/Component - Owner - Duration)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Fees & Payments 
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Warranty
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Security
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Communication Management Process
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Risk Management Process
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Issue Control Process
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Change Control Process
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Termination Assistance
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Opt. Section 1 - Specific Operations for Maintenance
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Opt. Section 2 - Call Center Support Requirements
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Opt. Section 3 - Metadata any data used to identify sections, measure performance...)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Opt. Section 4 - xOTA Procedures
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> SAFe Scaled Agile Framework Process
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Reporting
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Governance
+        </label>
+    </form>
+    <br>
+
+    <!--DOMANDA 28-->
+    <label>SOW 2 - Operations*</label>
+    <form>
+        <label>
+            <input type="checkbox" name="languages" value="FINANCE"> Service Scope Overview
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="TAX"> Service Model
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Commencement and Term
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Operations Set Up and Transition
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Operations Maintenance
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Operations Management
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Security
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Processes Overview
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.1 Availability
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.2 Configuration
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.3 Capacity
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.4 Release
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.5 Performance
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.6 incident
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.7 Problem
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> P.8 Other (Demand, Service Catalog, Continual improvement...)
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Level
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> S.1 Service Level Matrix
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Fees
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Service Financial Matrix
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Termination Assistance Services / Reversibility
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Key Supplier Personnel
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Reporting
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Governance
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Data Privacy Agreement
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="languages" value="CAPEX"> Data Export Agreement (Opt)
+        </label>
+    </form>
+    <br>
+
     <button onclick="test()">Prova</button>
     <script src="./js/test.js"></script>
-    <!-- Prova-->
 </body>
 </html>
 
